@@ -28,6 +28,7 @@ int main(int argc, char** argv){
     int length = arrayLines.size();
     int j = 0, extraLines = 0;
 
+    //Checks for sudo instructions to add extra lines to the array for shifting
     for(int i = 0; i < length; i++){
         if(arrayLines[i].length() == 0){
             continue;

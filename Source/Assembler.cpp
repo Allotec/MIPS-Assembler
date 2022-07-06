@@ -151,7 +151,7 @@ struct label* labelList(char** array, uint8_t &length){
 
         if(location != 255){
             //Store in linked list
-            if(head == NULL){
+            if(head == NULL){//If null create head
                 head = new struct label;
                 tail = head;
                 head->location = programCounter;
@@ -164,7 +164,7 @@ struct label* labelList(char** array, uint8_t &length){
 
                 head->name[location] = 0;
             }
-            else{
+            else{//else create the tail
                 tail->next = new struct label;
                 tail = tail->next;
                 tail->location = programCounter;
