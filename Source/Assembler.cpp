@@ -361,12 +361,12 @@ uint32_t mipsInstruction(char* opcode, char* rd, char* rs, char* rt, struct labe
             //case for c.x.s or c.x.d
             if(functV == 0x32 || functV == 0x3c || functV == 0x3e){
                 if(rdV == 0xFF){
-                    rdV = rsV;
-                    rsV = arrayToNum(rd) * 4;
+                    rdV = arrayToNum(rd) * 4;
                 }
                 else{
                     rtV = rsV;
-                    rsV = 0;
+                    rsV = rdV;
+                    rdV = 0;
                 }
             }
 
